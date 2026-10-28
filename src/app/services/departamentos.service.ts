@@ -27,8 +27,12 @@ export class ServiceDepartamentos {
     }
     async updateDepartment(d: Departamento): Promise<any> {
         let request = "api/departamentos";
-        let header = new HttpHeaders().set("content-type","application/json")
+        let header = new HttpHeaders().set("content-type", "application/json")
         let json = JSON.stringify(d);
         return firstValueFrom(this._http.put(this.url + request, json, { headers: header }))
+    }
+    async deleteDepartment(id: number): Promise<any> {
+        let request = "api/departamentos/" + id;
+        return firstValueFrom(this._http.delete(this.url + request))
     }
 }

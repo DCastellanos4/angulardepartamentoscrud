@@ -14,7 +14,15 @@ export class DepartamentosComponent implements OnInit {
 
   }
   async ngOnInit(): Promise<void> {
+    await this.loadDepart()
+    this._cdr.detectChanges()
+  }
+  async loadDepart(): Promise<void>{
     this.departamentos = await this._ds.getDepartamentos();
+  }
+  async deleteDepart(id: number): Promise<void> {
+    let res = await this._ds.deleteDepartment(id)
+    await this.loadDepart()
     this._cdr.detectChanges()
   }
 }

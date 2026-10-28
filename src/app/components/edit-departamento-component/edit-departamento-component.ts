@@ -13,7 +13,7 @@ export class EditDepartamentoComponent {
   public id!: string;
   @ViewChild('nombre') nombre!: ElementRef;
   @ViewChild('localidad') localidad!: ElementRef;
-  constructor(private _cdr: ChangeDetectorRef, private _ds: ServiceDepartamentos, private _ar: ActivatedRoute,private _router: Router) {
+  constructor(private _cdr: ChangeDetectorRef, private _ds: ServiceDepartamentos, private _ar: ActivatedRoute, private _router: Router) {
   }
   async ngOnInit(): Promise<void> {
     this._ar.params.subscribe((params: Params) => {
