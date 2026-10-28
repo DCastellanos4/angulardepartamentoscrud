@@ -1,0 +1,5 @@
+.page-content {
+  width: min(100% - 2rem, 900px);
+  margin: 2rem auto;
+  text-align: center;
+}

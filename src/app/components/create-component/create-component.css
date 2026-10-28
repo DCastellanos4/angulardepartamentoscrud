@@ -1,0 +1,42 @@
+.form-card {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px #1d35570f;
+}
+
+.form-card form {
+  display: grid;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.form-card input {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem;
+  border: 1px solid #b8c7d9;
+  border-radius: 5px;
+}
+
+.form-card button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background: #2a6f97;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  background: #1d3557;
+}
+
+.message {
+  min-height: 1.25rem;
+  color: #287d3c;
+}

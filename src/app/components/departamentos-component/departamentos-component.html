@@ -1,20 +1,50 @@
-<h1>Departamentos</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Número</th>
-      <th>Nombre</th>
-      <th>Localidad</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for (departamento of departamentos; track departamento.numero) {
+<section class="table-card">
+  <h1>Departamentos</h1>
+  <table class="department-table">
+    <thead>
       <tr>
-        <td>{{ departamento.numero }}</td>
-        <td>{{ departamento.nombre }}</td>
-        <td>{{ departamento.localidad }}</td>
+        <th>Número</th>
+        <th>Nombre</th>
+        <th>Localidad</th>
+        <th>Accion</th>
       </tr>
-    }
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      @for (departamento of departamentos; track departamento.numero) {
+        <tr>
+          <td>{{ departamento.numero }}</td>
+          <td>{{ departamento.nombre }}</td>
+          <td>{{ departamento.localidad }}</td>
+          <td class="action-cell">
+            <a
+              class="btn-details"
+              [routerLink]="[
+                '/details/',
+                departamento.numero,
+                departamento.nombre,
+                departamento.localidad
+              ]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="btn-icon"
+              >
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>Detalles</span>
+            </a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>

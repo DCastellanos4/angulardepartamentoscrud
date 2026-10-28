@@ -13,6 +13,6 @@ export class EditDepartamentoComponent {
   }
   async ngOnInit(): Promise<void> {
     this.departamentos = await this._ds.getDepartamentos();
-    this._cdr.detectChanges()
+    this._cdr.detectChanges();
   }
 }

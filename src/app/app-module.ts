@@ -10,6 +10,7 @@ import { DepartamentosComponent } from './components/departamentos-component/dep
 import { ServiceDepartamentos } from './services/departamentos.service';
 import { EditDepartamentoComponent } from './components/edit-departamento-component/edit-departamento-component';
 import { CreateComponent } from './components/create-component/create-component';
+import { DetailsComponent } from './components/details-component/details-component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CreateComponent } from './components/create-component/create-component'
     DepartamentosComponent,
     EditDepartamentoComponent,
     CreateComponent,
+    DetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceDepartamentos],

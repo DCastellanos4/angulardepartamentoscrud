@@ -1,8 +1,11 @@
-<h1>Editar departamento</h1>
-<form #selectDepart="ngForm">
-    <select>
+<section class="form-card">
+  <h1>Editar departamento</h1>
+  <form #selectDepart="ngForm">
+    <label for="department">Selecciona un departamento</label>
+    <select id="department">
         @for (d of departamentos; track $index) {
             <option value="{{d.numero}}">{{d.nombre}}</option>
         }
     </select>
-</form>
+  </form>
+</section>
