@@ -1,11 +1,12 @@
 <section class="form-card">
   <h1>Editar departamento</h1>
   <form #selectDepart="ngForm">
-    <label for="department">Selecciona un departamento</label>
-    <select id="department">
-        @for (d of departamentos; track $index) {
-            <option value="{{d.numero}}">{{d.nombre}}</option>
-        }
-    </select>
+    <label>Numero</label>
+    <input type="number" #numero name="numero" disabled placeholder="{{ departamento.numero }}" />
+    <label>Nombre</label>
+    <input type="text" #nombre name="nombre" placeholder="{{ departamento.nombre }}" />
+    <label>Localidad</label>
+    <input type="text" #localidad name="localidad" placeholder="{{ departamento.localidad }}" />
+    <button (click)="editarDepartamento()">Editar</button>
   </form>
 </section>

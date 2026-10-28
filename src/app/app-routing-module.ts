@@ -9,9 +9,9 @@ import { DetailsComponent } from './components/details-component/details-compone
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "depart", component: DepartamentosComponent },
-  { path: "edit", component: EditDepartamentoComponent },
+  { path: "edit/:id", component: EditDepartamentoComponent },
   { path: "create", component: CreateComponent },
-  { path: "details/:id/:nombre/:localidad", component: DetailsComponent }
+  { path: "details/:id/:nombre/:localidad", component: DetailsComponent },
 ];
 
 @NgModule({
